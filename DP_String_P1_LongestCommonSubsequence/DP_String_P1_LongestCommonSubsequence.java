@@ -9,4 +9,9 @@ package DP_String_P1_LongestCommonSubsequence;
  * Space Complexity: O(M * N) -> O(N) space optimized
  */
 public class DP_String_P1_LongestCommonSubsequence {
+
+    public int p1_solve(String s1, String s2) {
+        if (text1 == null || text2 == null || text1.length() == 0 || text2.length() == 0) return 0;
+        return 0;
+    }
 }
