@@ -57,4 +57,11 @@ public class DP_String_P1_LongestCommonSubsequence {
         }
         return prev[n];
     }
+
+    public static void main(String[] args) {
+        DP_String_P1_LongestCommonSubsequence lcs = new DP_String_P1_LongestCommonSubsequence();
+        System.out.println("Test 1 Result: " + lcs.longestCommonSubsequence("abcde", "ace")); // 3
+        System.out.println("Test 2 Result: " + lcs.longestCommonSubsequence("abc", "abc"));   // 3
+        System.out.println("Test 3 Result: " + lcs.longestCommonSubsequence("abc", "def"));   // 0
+    }
 }
