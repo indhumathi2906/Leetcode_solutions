@@ -12,11 +12,13 @@ import java.util.Arrays;
  */
 public class DP_String_P1_LongestCommonSubsequence {
 
+    // Entry point algorithm wrapper with edge case validation
     public int p1_solve(String s1, String s2) {
         if (text1 == null || text2 == null || text1.length() == 0 || text2.length() == 0) return 0;
         return 0;
     }
 
+    // Top-Down Memoization approach with state caching
     public int solveMemo(String s1, String s2, int i, int j, int[][] memo) {
         if (i == s1.length() || j == s2.length()) return 0;
         if (memo[i][j] != -1) return memo[i][j];
@@ -27,6 +29,7 @@ public class DP_String_P1_LongestCommonSubsequence {
         }
     }
 
+    // Bottom-Up 2D Dynamic Programming table calculation
     public int longestCommonSubsequenceTab(String text1, String text2) {
         int m = text1.length(), n = text2.length();
         int[][] dp = new int[m + 1][n + 1];
@@ -42,6 +45,7 @@ public class DP_String_P1_LongestCommonSubsequence {
         return dp[m][n];
     }
 
+    // 1D Space Optimized Dynamic Programming implementation
     public int longestCommonSubsequenceOptimized(String text1, String text2) {
         int m = text1.length(), n = text2.length();
         int[] prev = new int[n + 1], curr = new int[n + 1];
