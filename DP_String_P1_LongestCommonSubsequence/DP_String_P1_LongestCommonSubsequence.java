@@ -68,4 +68,9 @@ public class DP_String_P1_LongestCommonSubsequence {
         System.out.println("Test 2 Result: " + lcs.longestCommonSubsequence("abc", "abc"));   // 3
         System.out.println("Test 3 Result: " + lcs.longestCommonSubsequence("abc", "def"));   // 0
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Longest Common Subsequence";
+    }
 }
