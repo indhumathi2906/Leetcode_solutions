@@ -1,5 +1,7 @@
 package DP_String_P2_EditDistance;
 
+import java.util.Arrays;
+
 /**
  * LeetCode 72: Edit Distance
  * 
@@ -13,5 +15,16 @@ public class DP_String_P2_EditDistance {
     public int p2_solve(String s1, String s2) {
         if (word1 == null || word2 == null) return 0; if (word1.length() == 0) return word2.length(); if (word2.length() == 0) return word1.length();
         return 0;
+    }
+
+    public int solveMemo(String w1, String w2, int i, int j, int[][] memo) {
+        if (i == 0) return j;
+        if (j == 0) return i;
+        if (memo[i][j] != -1) return memo[i][j];
+        if (w1.charAt(i - 1) == w2.charAt(j - 1)) {
+            return memo[i][j] = solveMemo(w1, w2, i - 1, j - 1, memo);
+        }
+        return memo[i][j] = 1 + Math.min(solveMemo(w1, w2, i, j - 1, memo),
+                            Math.min(solveMemo(w1, w2, i - 1, j, memo), solveMemo(w1, w2, i - 1, j - 1, memo)));
     }
 }
