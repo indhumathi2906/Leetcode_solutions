@@ -62,4 +62,10 @@ public class DP_String_P2_EditDistance {
         }
         return prev[n];
     }
+
+    public static void main(String[] args) {
+        DP_String_P2_EditDistance ed = new DP_String_P2_EditDistance();
+        System.out.println("Test 1 Result: " + ed.minDistance("horse", "ros"));       // 3
+        System.out.println("Test 2 Result: " + ed.minDistance("intention", "execution")); // 5
+    }
 }
