@@ -12,11 +12,13 @@ import java.util.Arrays;
  */
 public class DP_String_P2_EditDistance {
 
+    // Entry point algorithm wrapper with edge case validation
     public int p2_solve(String s1, String s2) {
         if (word1 == null || word2 == null) return 0; if (word1.length() == 0) return word2.length(); if (word2.length() == 0) return word1.length();
         return 0;
     }
 
+    // Top-Down Memoization approach with state caching
     public int solveMemo(String w1, String w2, int i, int j, int[][] memo) {
         if (i == 0) return j;
         if (j == 0) return i;
@@ -28,6 +30,7 @@ public class DP_String_P2_EditDistance {
                             Math.min(solveMemo(w1, w2, i - 1, j, memo), solveMemo(w1, w2, i - 1, j - 1, memo)));
     }
 
+    // Bottom-Up 2D Dynamic Programming table calculation
     public int minDistanceTab(String word1, String word2) {
         int m = word1.length(), n = word2.length();
         int[][] dp = new int[m + 1][n + 1];
@@ -45,6 +48,7 @@ public class DP_String_P2_EditDistance {
         return dp[m][n];
     }
 
+    // 1D Space Optimized Dynamic Programming implementation
     public int minDistanceOptimized(String word1, String word2) {
         int m = word1.length(), n = word2.length();
         int[] prev = new int[n + 1], curr = new int[n + 1];
