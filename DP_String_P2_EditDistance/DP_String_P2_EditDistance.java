@@ -72,4 +72,9 @@ public class DP_String_P2_EditDistance {
         System.out.println("Test 1 Result: " + ed.minDistance("horse", "ros"));       // 3
         System.out.println("Test 2 Result: " + ed.minDistance("intention", "execution")); // 5
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Edit Distance";
+    }
 }
