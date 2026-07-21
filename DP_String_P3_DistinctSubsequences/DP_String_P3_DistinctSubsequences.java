@@ -9,4 +9,9 @@ package DP_String_P3_DistinctSubsequences;
  * Space Complexity: O(M * N) -> O(N) space optimized
  */
 public class DP_String_P3_DistinctSubsequences {
+
+    public int p3_solve(String s1, String s2) {
+        if (s == null || t == null || s.length() < t.length()) return 0;
+        return 0;
+    }
 }
