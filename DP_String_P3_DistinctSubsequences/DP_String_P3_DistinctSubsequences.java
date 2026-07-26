@@ -12,11 +12,13 @@ import java.util.Arrays;
  */
 public class DP_String_P3_DistinctSubsequences {
 
+    // Entry point algorithm wrapper with edge case validation
     public int p3_solve(String s1, String s2) {
         if (s == null || t == null || s.length() < t.length()) return 0;
         return 0;
     }
 
+    // Top-Down Memoization approach with state caching
     public int solveMemo(String s, String t, int i, int j, int[][] memo) {
         if (j == 0) return 1;
         if (i == 0) return 0;
@@ -28,6 +30,7 @@ public class DP_String_P3_DistinctSubsequences {
         }
     }
 
+    // Bottom-Up 2D Dynamic Programming table calculation
     public int numDistinctTab(String s, String t) {
         int m = s.length(), n = t.length();
         int[][] dp = new int[m + 1][n + 1];
@@ -44,6 +47,7 @@ public class DP_String_P3_DistinctSubsequences {
         return dp[m][n];
     }
 
+    // 1D Space Optimized Dynamic Programming implementation
     public int numDistinctOptimized(String s, String t) {
         int m = s.length(), n = t.length();
         int[] dp = new int[n + 1];
