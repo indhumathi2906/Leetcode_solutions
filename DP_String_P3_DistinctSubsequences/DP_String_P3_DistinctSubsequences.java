@@ -67,4 +67,9 @@ public class DP_String_P3_DistinctSubsequences {
         System.out.println("Test 1 Result: " + ds.numDistinct("rabbbit", "rabbit")); // 3
         System.out.println("Test 2 Result: " + ds.numDistinct("babgbag", "bag"));    // 5
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Distinct Subsequences";
+    }
 }
