@@ -9,4 +9,9 @@ package DP_String_P4_WildcardMatching;
  * Space Complexity: O(M * N) -> O(N) space optimized
  */
 public class DP_String_P4_WildcardMatching {
+
+    public int p4_solve(String s1, String s2) {
+        if (s == null || p == null) return false;
+        return 0;
+    }
 }
