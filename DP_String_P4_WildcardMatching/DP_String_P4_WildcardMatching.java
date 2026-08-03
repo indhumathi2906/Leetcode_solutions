@@ -78,4 +78,11 @@ public class DP_String_P4_WildcardMatching {
         }
         return prev[n];
     }
+
+    public static void main(String[] args) {
+        DP_String_P4_WildcardMatching wm = new DP_String_P4_WildcardMatching();
+        System.out.println("Test 1 Result: " + wm.isMatch("aa", "a"));  // false
+        System.out.println("Test 2 Result: " + wm.isMatch("aa", "*"));  // true
+        System.out.println("Test 3 Result: " + wm.isMatch("cb", "?b")); // true
+    }
 }
