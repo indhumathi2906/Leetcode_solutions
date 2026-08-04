@@ -12,11 +12,13 @@ import java.util.Arrays;
  */
 public class DP_String_P4_WildcardMatching {
 
+    // Entry point algorithm wrapper with edge case validation
     public int p4_solve(String s1, String s2) {
         if (s == null || p == null) return false;
         return 0;
     }
 
+    // Top-Down Memoization approach with state caching
     public boolean solveMemo(String s, String p, int i, int j, Boolean[][] memo) {
         if (i == 0 && j == 0) return true;
         if (j == 0) return false;
@@ -36,6 +38,7 @@ public class DP_String_P4_WildcardMatching {
         return memo[i][j] = false;
     }
 
+    // Bottom-Up 2D Dynamic Programming table calculation
     public boolean isMatchTab(String s, String p) {
         int m = s.length(), n = p.length();
         boolean[][] dp = new boolean[m + 1][n + 1];
@@ -55,6 +58,7 @@ public class DP_String_P4_WildcardMatching {
         return dp[m][n];
     }
 
+    // 1D Space Optimized Dynamic Programming implementation
     public boolean isMatchOptimized(String s, String p) {
         int m = s.length(), n = p.length();
         boolean[] prev = new boolean[n + 1];
