@@ -89,4 +89,9 @@ public class DP_String_P4_WildcardMatching {
         System.out.println("Test 2 Result: " + wm.isMatch("aa", "*"));  // true
         System.out.println("Test 3 Result: " + wm.isMatch("cb", "?b")); // true
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Wildcard Matching";
+    }
 }
