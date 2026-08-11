@@ -51,4 +51,8 @@ public class DP_String_P5_RegularExpressionMatching {
         }
         return dp[m][n];
     }
+
+    public boolean isMatchOptimized(String s, String p) {
+        return isMatchTab(s, p);
+    }
 }
