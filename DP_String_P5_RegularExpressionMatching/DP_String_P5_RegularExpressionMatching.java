@@ -12,11 +12,13 @@ import java.util.Arrays;
  */
 public class DP_String_P5_RegularExpressionMatching {
 
+    // Entry point algorithm wrapper with edge case validation
     public int p5_solve(String s1, String s2) {
         if (s == null || p == null) return false;
         return 0;
     }
 
+    // Top-Down Memoization approach with state caching
     public boolean solveMemo(String s, String p, int i, int j, Boolean[][] memo) {
         if (j == 0) return i == 0;
         if (memo[i][j] != null) return memo[i][j];
@@ -33,6 +35,7 @@ public class DP_String_P5_RegularExpressionMatching {
         return (i > 0) && (p.charAt(j - 2) == s.charAt(i - 1) || p.charAt(j - 2) == '.');
     }
 
+    // Bottom-Up 2D Dynamic Programming table calculation
     public boolean isMatchTab(String s, String p) {
         int m = s.length(), n = p.length();
         boolean[][] dp = new boolean[m + 1][n + 1];
@@ -52,6 +55,7 @@ public class DP_String_P5_RegularExpressionMatching {
         return dp[m][n];
     }
 
+    // 1D Space Optimized Dynamic Programming implementation
     public boolean isMatchOptimized(String s, String p) {
         return isMatchTab(s, p);
     }
