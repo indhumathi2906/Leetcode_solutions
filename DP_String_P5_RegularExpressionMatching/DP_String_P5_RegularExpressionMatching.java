@@ -66,4 +66,9 @@ public class DP_String_P5_RegularExpressionMatching {
         System.out.println("Test 2 Result: " + rem.isMatch("aa", "a*"));  // true
         System.out.println("Test 3 Result: " + rem.isMatch("ab", ".*"));  // true
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Regular Expression Matching";
+    }
 }
