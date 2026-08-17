@@ -9,4 +9,9 @@ package DP_String_P6_LongestPalindromicSubsequence;
  * Space Complexity: O(M * N) -> O(N) space optimized
  */
 public class DP_String_P6_LongestPalindromicSubsequence {
+
+    public int p6_solve(String s1, String s2) {
+        if (s == null || s.length() == 0) return 0;
+        return 0;
+    }
 }
