@@ -1,5 +1,7 @@
 package DP_String_P6_LongestPalindromicSubsequence;
 
+import java.util.Arrays;
+
 /**
  * LeetCode 516: Longest Palindromic Subsequence
  * 
@@ -13,5 +15,16 @@ public class DP_String_P6_LongestPalindromicSubsequence {
     public int p6_solve(String s1, String s2) {
         if (s == null || s.length() == 0) return 0;
         return 0;
+    }
+
+    public int solveMemo(String s, int i, int j, int[][] memo) {
+        if (i > j) return 0;
+        if (i == j) return 1;
+        if (memo[i][j] != -1) return memo[i][j];
+        if (s.charAt(i) == s.charAt(j)) {
+            return memo[i][j] = 2 + solveMemo(s, i + 1, j - 1, memo);
+        } else {
+            return memo[i][j] = Math.max(solveMemo(s, i + 1, j, memo), solveMemo(s, i, j - 1, memo));
+        }
     }
 }
