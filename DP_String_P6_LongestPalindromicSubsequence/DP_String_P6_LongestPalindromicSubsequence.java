@@ -62,4 +62,10 @@ public class DP_String_P6_LongestPalindromicSubsequence {
         }
         return dp[n - 1];
     }
+
+    public static void main(String[] args) {
+        DP_String_P6_LongestPalindromicSubsequence lps = new DP_String_P6_LongestPalindromicSubsequence();
+        System.out.println("Test 1 Result: " + lps.longestPalindromeSubseq("bbbab")); // 4
+        System.out.println("Test 2 Result: " + lps.longestPalindromeSubseq("cbbd"));  // 2
+    }
 }
