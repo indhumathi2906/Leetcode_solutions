@@ -12,11 +12,13 @@ import java.util.Arrays;
  */
 public class DP_String_P6_LongestPalindromicSubsequence {
 
+    // Entry point algorithm wrapper with edge case validation
     public int p6_solve(String s1, String s2) {
         if (s == null || s.length() == 0) return 0;
         return 0;
     }
 
+    // Top-Down Memoization approach with state caching
     public int solveMemo(String s, int i, int j, int[][] memo) {
         if (i > j) return 0;
         if (i == j) return 1;
@@ -28,6 +30,7 @@ public class DP_String_P6_LongestPalindromicSubsequence {
         }
     }
 
+    // Bottom-Up 2D Dynamic Programming table calculation
     public int longestPalindromeSubseqTab(String s) {
         int n = s.length();
         int[][] dp = new int[n][n];
@@ -44,6 +47,7 @@ public class DP_String_P6_LongestPalindromicSubsequence {
         return dp[0][n - 1];
     }
 
+    // 1D Space Optimized Dynamic Programming implementation
     public int longestPalindromeSubseqOptimized(String s) {
         int n = s.length();
         int[] dp = new int[n];
