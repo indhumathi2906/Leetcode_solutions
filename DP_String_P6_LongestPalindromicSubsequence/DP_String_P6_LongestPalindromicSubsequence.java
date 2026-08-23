@@ -72,4 +72,9 @@ public class DP_String_P6_LongestPalindromicSubsequence {
         System.out.println("Test 1 Result: " + lps.longestPalindromeSubseq("bbbab")); // 4
         System.out.println("Test 2 Result: " + lps.longestPalindromeSubseq("cbbd"));  // 2
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Longest Palindromic Subsequence";
+    }
 }
