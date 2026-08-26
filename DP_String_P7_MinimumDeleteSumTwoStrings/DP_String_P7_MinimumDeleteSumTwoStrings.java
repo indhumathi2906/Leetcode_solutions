@@ -9,4 +9,9 @@ package DP_String_P7_MinimumDeleteSumTwoStrings;
  * Space Complexity: O(M * N) -> O(N) space optimized
  */
 public class DP_String_P7_MinimumDeleteSumTwoStrings {
+
+    public int p7_solve(String s1, String s2) {
+        if (s1 == null || s2 == null) return 0;
+        return 0;
+    }
 }
