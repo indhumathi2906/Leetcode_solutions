@@ -73,4 +73,10 @@ public class DP_String_P7_MinimumDeleteSumTwoStrings {
         }
         return prev[n];
     }
+
+    public static void main(String[] args) {
+        DP_String_P7_MinimumDeleteSumTwoStrings mds = new DP_String_P7_MinimumDeleteSumTwoStrings();
+        System.out.println("Test 1 Result: " + mds.minimumDeleteSum("sea", "eat")); // 231
+        System.out.println("Test 2 Result: " + mds.minimumDeleteSum("delete", "leet")); // 403
+    }
 }
