@@ -83,4 +83,9 @@ public class DP_String_P7_MinimumDeleteSumTwoStrings {
         System.out.println("Test 1 Result: " + mds.minimumDeleteSum("sea", "eat")); // 231
         System.out.println("Test 2 Result: " + mds.minimumDeleteSum("delete", "leet")); // 403
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Minimum ASCII Delete Sum for Two Strings";
+    }
 }
