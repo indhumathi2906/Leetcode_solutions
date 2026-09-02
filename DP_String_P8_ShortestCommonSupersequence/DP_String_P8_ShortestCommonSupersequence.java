@@ -1,0 +1,4 @@
+package DP_String_P8_ShortestCommonSupersequence;
+
+public class DP_String_P8_ShortestCommonSupersequence {
+}
