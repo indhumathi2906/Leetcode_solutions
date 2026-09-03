@@ -1,4 +1,12 @@
 package DP_String_P8_ShortestCommonSupersequence;
 
+/**
+ * LeetCode 1092: Shortest Common Supersequence
+ * 
+ * Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences.
+ * 
+ * Time Complexity: O(M * N)
+ * Space Complexity: O(M * N) -> O(N) space optimized
+ */
 public class DP_String_P8_ShortestCommonSupersequence {
 }
