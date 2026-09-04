@@ -9,4 +9,9 @@ package DP_String_P8_ShortestCommonSupersequence;
  * Space Complexity: O(M * N) -> O(N) space optimized
  */
 public class DP_String_P8_ShortestCommonSupersequence {
+
+    public int p8_solve(String s1, String s2) {
+        if (str1 == null) return str2; if (str2 == null) return str1;
+        return 0;
+    }
 }
