@@ -68,4 +68,9 @@ public class DP_String_P8_ShortestCommonSupersequence {
         }
         return dp[s2.length()];
     }
+
+    public static void main(String[] args) {
+        DP_String_P8_ShortestCommonSupersequence scs = new DP_String_P8_ShortestCommonSupersequence();
+        System.out.println("Test 1 Result: " + scs.shortestCommonSupersequence("abac", "cab")); // "cabac"
+    }
 }
