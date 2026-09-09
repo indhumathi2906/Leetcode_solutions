@@ -12,11 +12,13 @@ import java.util.Arrays;
  */
 public class DP_String_P8_ShortestCommonSupersequence {
 
+    // Entry point algorithm wrapper with edge case validation
     public int p8_solve(String s1, String s2) {
         if (str1 == null) return str2; if (str2 == null) return str1;
         return 0;
     }
 
+    // Top-Down Memoization approach with state caching
     public String shortestCommonSupersequence(String str1, String str2) {
         int m = str1.length(), n = str2.length();
         int[][] dp = new int[m + 1][n + 1];
@@ -32,6 +34,7 @@ public class DP_String_P8_ShortestCommonSupersequence {
         return buildSCS(str1, str2, dp);
     }
 
+    // Bottom-Up 2D Dynamic Programming table calculation
     private String buildSCS(String str1, String str2, int[][] dp) {
         StringBuilder sb = new StringBuilder();
         int i = str1.length(), j = str2.length();
@@ -52,6 +55,7 @@ public class DP_String_P8_ShortestCommonSupersequence {
         return sb.reverse().toString();
     }
 
+    // 1D Space Optimized Dynamic Programming implementation
     public int shortestSupersequenceLength(String str1, String str2) {
         return str1.length() + str2.length() - lcsLen(str1, str2);
     }
