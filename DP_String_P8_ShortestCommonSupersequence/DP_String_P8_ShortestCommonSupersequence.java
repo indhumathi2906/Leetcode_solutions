@@ -77,4 +77,9 @@ public class DP_String_P8_ShortestCommonSupersequence {
         DP_String_P8_ShortestCommonSupersequence scs = new DP_String_P8_ShortestCommonSupersequence();
         System.out.println("Test 1 Result: " + scs.shortestCommonSupersequence("abac", "cab")); // "cabac"
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Shortest Common Supersequence";
+    }
 }
