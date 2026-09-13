@@ -9,4 +9,9 @@ package DP_String_P9_InterleavingString;
  * Space Complexity: O(M * N) -> O(N) space optimized
  */
 public class DP_String_P9_InterleavingString {
+
+    public int p9_solve(String s1, String s2) {
+        if (s1.length() + s2.length() != s3.length()) return false;
+        return 0;
+    }
 }
