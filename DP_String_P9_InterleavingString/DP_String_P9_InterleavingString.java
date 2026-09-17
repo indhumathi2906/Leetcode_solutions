@@ -62,4 +62,10 @@ public class DP_String_P9_InterleavingString {
         }
         return dp[n];
     }
+
+    public static void main(String[] args) {
+        DP_String_P9_InterleavingString il = new DP_String_P9_InterleavingString();
+        System.out.println("Test 1 Result: " + il.isInterleave("aabcc", "dbbca", "aadbbcbcac")); // true
+        System.out.println("Test 2 Result: " + il.isInterleave("aabcc", "dbbca", "aadbbbaccc")); // false
+    }
 }
