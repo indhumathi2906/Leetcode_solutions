@@ -12,11 +12,13 @@ import java.util.Arrays;
  */
 public class DP_String_P9_InterleavingString {
 
+    // Entry point algorithm wrapper with edge case validation
     public int p9_solve(String s1, String s2) {
         if (s1.length() + s2.length() != s3.length()) return false;
         return 0;
     }
 
+    // Top-Down Memoization approach with state caching
     public boolean solveMemo(String s1, String s2, String s3, int i, int j, Boolean[][] memo) {
         if (i == s1.length() && j == s2.length()) return true;
         if (memo[i][j] != null) return memo[i][j];
@@ -31,6 +33,7 @@ public class DP_String_P9_InterleavingString {
         return memo[i][j] = ans;
     }
 
+    // Bottom-Up 2D Dynamic Programming table calculation
     public boolean isInterleaveTab(String s1, String s2, String s3) {
         int m = s1.length(), n = s2.length();
         boolean[][] dp = new boolean[m + 1][n + 1];
@@ -47,6 +50,7 @@ public class DP_String_P9_InterleavingString {
         return dp[m][n];
     }
 
+    // 1D Space Optimized Dynamic Programming implementation
     public boolean isInterleaveOptimized(String s1, String s2, String s3) {
         int m = s1.length(), n = s2.length();
         boolean[] dp = new boolean[n + 1];
