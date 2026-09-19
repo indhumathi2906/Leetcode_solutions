@@ -72,4 +72,9 @@ public class DP_String_P9_InterleavingString {
         System.out.println("Test 1 Result: " + il.isInterleave("aabcc", "dbbca", "aadbbcbcac")); // true
         System.out.println("Test 2 Result: " + il.isInterleave("aabcc", "dbbca", "aadbbbaccc")); // false
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Interleaving String";
+    }
 }
