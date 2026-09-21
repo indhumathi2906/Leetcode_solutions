@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0213-house-robber-ii](https://github.com/indhumathi2906/Leetcode_solutions/tree/master/0213-house-robber-ii) |
+| [0373-find-k-pairs-with-smallest-sums](https://github.com/indhumathi2906/Leetcode_solutions/tree/master/0373-find-k-pairs-with-smallest-sums) |
 | [1460-make-two-arrays-equal-by-reversing-subarrays](https://github.com/indhumathi2906/Leetcode_solutions/tree/master/1460-make-two-arrays-equal-by-reversing-subarrays) |
 | [1656-design-an-ordered-stream](https://github.com/indhumathi2906/Leetcode_solutions/tree/master/1656-design-an-ordered-stream) |
 ## Dynamic Programming
@@ -44,4 +45,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1460-make-two-arrays-equal-by-reversing-subarrays](https://github.com/indhumathi2906/Leetcode_solutions/tree/master/1460-make-two-arrays-equal-by-reversing-subarrays) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0373-find-k-pairs-with-smallest-sums](https://github.com/indhumathi2906/Leetcode_solutions/tree/master/0373-find-k-pairs-with-smallest-sums) |
 <!---LeetCode Topics End-->
