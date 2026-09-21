@@ -2,7 +2,7 @@
 
 <p>Given an integer array <code>nums</code> representing the amount of money of each house, return <em>the maximum amount of money you can rob tonight <strong>without alerting the police</strong></em>.</p>
 
-<p>&nbsp;</p>
+<p>&nbsp;</p
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
