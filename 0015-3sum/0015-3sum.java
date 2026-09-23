@@ -2,8 +2,9 @@ import java.util.*;
 
 /**
  * 15. 3Sum
- * Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
- * such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+ *
+ * Time Complexity: O(N^2) where N is the length of nums.
+ * Space Complexity: O(1) or O(N) depending on sorting implementation.
  */
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
@@ -11,7 +12,10 @@ class Solution {
         if (nums == null || nums.length < 3) {
             return result;
         }
+        // Step 1: Sort array
         Arrays.sort(nums);
+        
+        // Step 2: Iterate fixed element
         for (int i = 0; i < nums.length - 2; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             int left = i + 1, right = nums.length - 1;
