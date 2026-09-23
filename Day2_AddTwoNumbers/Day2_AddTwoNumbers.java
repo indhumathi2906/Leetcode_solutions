@@ -8,6 +8,9 @@ class ListNode {
 
 /**
  * Day 2: 2. Add Two Numbers (LeetCode #2)
+ *
+ * Time Complexity: O(max(N, M))
+ * Space Complexity: O(max(N, M))
  */
 public class Day2_AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
