@@ -7,6 +7,10 @@ import java.util.*;
  */
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-        return new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
+        if (nums == null || nums.length < 3) {
+            return result;
+        }
+        return result;
     }
 }
