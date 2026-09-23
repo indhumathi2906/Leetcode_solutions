@@ -7,10 +7,11 @@ class ListNode {
 }
 
 /**
- * 206. Reverse Linked List
+ * Problem: 206. Reverse Linked List
+ * Link: https://leetcode.com/problems/reverse-linked-list/
  *
- * Time Complexity: O(N) where N is list length.
- * Space Complexity: O(1) iterative solution.
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
@@ -19,7 +20,6 @@ class Solution {
         }
         ListNode prev = null;
         ListNode curr = head;
-        // Pointer reversal loop
         while (curr != null) {
             ListNode nextTemp = curr.next;
             curr.next = prev;
