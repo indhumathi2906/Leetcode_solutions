@@ -8,10 +8,12 @@ class ListNode {
 
 /**
  * Day 2: 2. Add Two Numbers (LeetCode #2)
- * You are given two non-empty linked lists representing two non-negative integers.
- * Digits are stored in reverse order, each node containing a single digit.
  */
 public class Day2_AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode curr = dummyHead;
+        int carry = 0;
+        return dummyHead.next;
     }
 }
