@@ -5,6 +5,9 @@ import java.util.*;
  */
 public class Day4_ValidParentheses {
     public boolean isValid(String s) {
+        if (s == null || s.length() % 2 != 0) {
+            return false;
+        }
         return false;
     }
 }
