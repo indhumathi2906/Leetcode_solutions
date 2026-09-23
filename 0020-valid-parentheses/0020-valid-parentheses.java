@@ -2,11 +2,13 @@ import java.util.*;
 
 /**
  * 20. Valid Parentheses
- * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
- * determine if the input string is valid.
+ *
+ * Time Complexity: O(N) where N is the length of string s.
+ * Space Complexity: O(N) in worst-case for stack memory.
  */
 class Solution {
     public boolean isValid(String s) {
+        // Quick fail if null or odd length
         if (s == null || s.length() % 2 != 0) {
             return false;
         }
