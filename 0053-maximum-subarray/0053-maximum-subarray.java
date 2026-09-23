@@ -1,6 +1,8 @@
 /**
  * 53. Maximum Subarray
- * Given an integer array nums, find the subarray with the largest sum, and return its sum.
+ *
+ * Time Complexity: O(N) - single pass over array.
+ * Space Complexity: O(1) - constant additional space.
  */
 class Solution {
     public int maxSubArray(int[] nums) {
@@ -9,6 +11,7 @@ class Solution {
         }
         int maxSoFar = nums[0];
         int currentSum = nums[0];
+        // Dynamic programming / Kadane's logic
         for (int i = 1; i < nums.length; i++) {
             currentSum = Math.max(nums[i], currentSum + nums[i]);
             maxSoFar = Math.max(maxSoFar, currentSum);
