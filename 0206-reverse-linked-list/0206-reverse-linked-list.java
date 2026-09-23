@@ -8,7 +8,9 @@ class ListNode {
 
 /**
  * 206. Reverse Linked List
- * Given the head of a singly linked list, reverse the list, and return the reversed list.
+ *
+ * Time Complexity: O(N) where N is list length.
+ * Space Complexity: O(1) iterative solution.
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
@@ -17,6 +19,7 @@ class Solution {
         }
         ListNode prev = null;
         ListNode curr = head;
+        // Pointer reversal loop
         while (curr != null) {
             ListNode nextTemp = curr.next;
             curr.next = prev;
