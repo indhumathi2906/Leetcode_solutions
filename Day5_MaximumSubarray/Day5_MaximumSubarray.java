@@ -1,5 +1,8 @@
 /**
  * Day 5: 53. Maximum Subarray (LeetCode #53)
+ *
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
  */
 public class Day5_MaximumSubarray {
     public int maxSubArray(int[] nums) {
