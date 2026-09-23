@@ -2,6 +2,9 @@ import java.util.*;
 
 /**
  * Day 3: 15. 3Sum (LeetCode #15)
+ *
+ * Time Complexity: O(N^2)
+ * Space Complexity: O(1)
  */
 public class Day3_3Sum {
     public List<List<Integer>> threeSum(int[] nums) {
