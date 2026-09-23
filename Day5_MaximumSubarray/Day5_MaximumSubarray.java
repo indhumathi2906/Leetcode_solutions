@@ -6,6 +6,8 @@ public class Day5_MaximumSubarray {
         if (nums == null || nums.length == 0) {
             return 0;
         }
-        return nums[0];
+        int maxSoFar = nums[0];
+        int currentSum = nums[0];
+        return maxSoFar;
     }
 }
