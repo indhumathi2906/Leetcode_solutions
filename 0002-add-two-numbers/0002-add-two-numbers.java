@@ -13,5 +13,9 @@ class ListNode {
  */
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode curr = dummyHead;
+        int carry = 0;
+        return dummyHead.next;
     }
 }
