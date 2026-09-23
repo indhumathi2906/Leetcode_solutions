@@ -8,6 +8,10 @@ public class Day5_MaximumSubarray {
         }
         int maxSoFar = nums[0];
         int currentSum = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            currentSum = Math.max(nums[i], currentSum + nums[i]);
+            maxSoFar = Math.max(maxSoFar, currentSum);
+        }
         return maxSoFar;
     }
 }
