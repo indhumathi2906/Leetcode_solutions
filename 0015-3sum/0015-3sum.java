@@ -11,6 +11,7 @@ class Solution {
         if (nums == null || nums.length < 3) {
             return result;
         }
+        Arrays.sort(nums);
         return result;
     }
 }
