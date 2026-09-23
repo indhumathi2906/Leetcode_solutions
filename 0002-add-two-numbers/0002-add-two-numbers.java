@@ -7,10 +7,11 @@ class ListNode {
 }
 
 /**
- * 2. Add Two Numbers
+ * Problem: 2. Add Two Numbers
+ * Link: https://leetcode.com/problems/add-two-numbers/
  *
- * Time Complexity: O(max(N, M)) where N and M are lengths of l1 and l2.
- * Space Complexity: O(max(N, M)) for output linked list.
+ * Time Complexity: O(max(N, M))
+ * Space Complexity: O(max(N, M))
  */
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -21,7 +22,6 @@ class Solution {
         ListNode curr = dummyHead;
         int carry = 0;
 
-        // Traverse both lists until all nodes and carry are processed
         while (l1 != null || l2 != null || carry != 0) {
             int x = (l1 != null) ? l1.val : 0;
             int y = (l2 != null) ? l2.val : 0;
