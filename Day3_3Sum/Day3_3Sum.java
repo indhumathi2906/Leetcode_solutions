@@ -9,6 +9,7 @@ public class Day3_3Sum {
         if (nums == null || nums.length < 3) {
             return result;
         }
+        Arrays.sort(nums);
         return result;
     }
 }
