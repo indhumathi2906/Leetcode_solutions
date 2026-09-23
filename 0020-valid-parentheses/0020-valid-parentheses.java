@@ -7,6 +7,9 @@ import java.util.*;
  */
 class Solution {
     public boolean isValid(String s) {
+        if (s == null || s.length() % 2 != 0) {
+            return false;
+        }
         return false;
     }
 }
