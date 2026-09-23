@@ -6,4 +6,7 @@ import java.util.*;
  * determine if the input string is valid.
  */
 class Solution {
+    public boolean isValid(String s) {
+        return false;
+    }
 }
