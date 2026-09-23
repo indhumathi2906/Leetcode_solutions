@@ -11,6 +11,9 @@ class ListNode {
  */
 public class Day7_ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
         return head;
     }
 }
