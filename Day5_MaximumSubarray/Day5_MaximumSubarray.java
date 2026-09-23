@@ -3,6 +3,9 @@
  */
 public class Day5_MaximumSubarray {
     public int maxSubArray(int[] nums) {
-        return 0;
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        return nums[0];
     }
 }
