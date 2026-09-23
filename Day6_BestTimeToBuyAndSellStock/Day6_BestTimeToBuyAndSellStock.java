@@ -3,6 +3,9 @@
  */
 public class Day6_BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
+        if (prices == null || prices.length < 2) {
+            return 0;
+        }
         return 0;
     }
 }
