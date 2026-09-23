@@ -6,4 +6,7 @@ import java.util.*;
  * such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
  */
 class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        return new ArrayList<>();
+    }
 }
