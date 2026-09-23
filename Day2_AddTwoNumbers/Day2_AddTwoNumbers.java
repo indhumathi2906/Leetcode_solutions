@@ -12,4 +12,6 @@ class ListNode {
  * Digits are stored in reverse order, each node containing a single digit.
  */
 public class Day2_AddTwoNumbers {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    }
 }
