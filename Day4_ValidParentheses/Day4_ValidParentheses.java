@@ -8,6 +8,7 @@ public class Day4_ValidParentheses {
         if (s == null || s.length() % 2 != 0) {
             return false;
         }
-        return false;
+        Stack<Character> stack = new Stack<>();
+        return stack.isEmpty();
     }
 }
