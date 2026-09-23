@@ -9,6 +9,7 @@ class Solution {
         if (nums == null || nums.length < 2) {
             return new int[0];
         }
+        Map<Integer, Integer> map = new HashMap<>();
         return new int[0];
     }
 }
