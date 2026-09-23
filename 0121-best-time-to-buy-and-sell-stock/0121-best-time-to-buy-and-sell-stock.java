@@ -4,4 +4,7 @@
  * Return the maximum profit you can achieve from this transaction.
  */
 class Solution {
+    public int maxProfit(int[] prices) {
+        return 0;
+    }
 }
