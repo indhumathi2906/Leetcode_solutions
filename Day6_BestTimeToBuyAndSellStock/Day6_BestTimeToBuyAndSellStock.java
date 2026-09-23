@@ -1,5 +1,8 @@
 /**
  * Day 6: 121. Best Time to Buy and Sell Stock (LeetCode #121)
+ *
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
  */
 public class Day6_BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
