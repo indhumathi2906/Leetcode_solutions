@@ -8,7 +8,9 @@ class ListNode {
 
 /**
  * Day 7: 206. Reverse Linked List (LeetCode #206)
- * Given the head of a singly linked list, reverse the list and return reversed head.
  */
 public class Day7_ReverseLinkedList {
+    public ListNode reverseList(ListNode head) {
+        return head;
+    }
 }
