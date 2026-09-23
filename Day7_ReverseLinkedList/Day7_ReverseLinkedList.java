@@ -8,6 +8,9 @@ class ListNode {
 
 /**
  * Day 7: 206. Reverse Linked List (LeetCode #206)
+ *
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
  */
 public class Day7_ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
