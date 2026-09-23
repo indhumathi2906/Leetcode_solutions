@@ -12,4 +12,6 @@ class ListNode {
  * The digits are stored in reverse order, and each of their nodes contains a single digit.
  */
 class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    }
 }
