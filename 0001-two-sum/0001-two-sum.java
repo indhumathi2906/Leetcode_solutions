@@ -6,5 +6,9 @@ import java.util.*;
  */
 class Solution {
     public int[] twoSum(int[] nums, int target) {
+        if (nums == null || nums.length < 2) {
+            return new int[0];
+        }
+        return new int[0];
     }
 }
