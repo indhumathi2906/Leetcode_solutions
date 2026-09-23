@@ -8,6 +8,8 @@ class Solution {
         if (prices == null || prices.length < 2) {
             return 0;
         }
-        return 0;
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+        return maxProfit;
     }
 }
