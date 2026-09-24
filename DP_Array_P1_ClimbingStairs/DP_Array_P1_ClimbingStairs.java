@@ -3,14 +3,20 @@ package DP_Array_P1_ClimbingStairs;
 /**
  * DP Array Problem 1: 70. Climbing Stairs (LeetCode #70)
  * Link: https://leetcode.com/problems/climbing-stairs/
- *
- * Description:
- * You are climbing a staircase. It takes n steps to reach the top.
- * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
  */
 public class DP_Array_P1_ClimbingStairs {
 
-    private boolean isValidInput(int n) {
-        return n > 0;
+    // Approach 1: Top-Down DP (Recursion + Memoization)
+    public int climbStairsMemo(int n) {
+        if (n <= 0) return 0;
+        int[] memo = new int[n + 1];
+        return memoHelper(n, memo);
+    }
+
+    private int memoHelper(int n, int[] memo) {
+        if (n <= 2) return n;
+        if (memo[n] != 0) return memo[n];
+        memo[n] = memoHelper(n - 1, memo) + memoHelper(n - 2, memo);
+        return memo[n];
     }
 }
