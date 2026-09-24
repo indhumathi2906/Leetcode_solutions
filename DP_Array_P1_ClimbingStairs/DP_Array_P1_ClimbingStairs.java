@@ -1,11 +1,7 @@
 package DP_Array_P1_ClimbingStairs;
 
-/**
- * DP Array Problem 1: 70. Climbing Stairs (LeetCode #70)
- */
 public class DP_Array_P1_ClimbingStairs {
 
-    // Approach 1: Top-Down DP (Recursion + Memoization)
     public int climbStairsMemo(int n) {
         if (n <= 0) return 0;
         int[] memo = new int[n + 1];
@@ -19,7 +15,6 @@ public class DP_Array_P1_ClimbingStairs {
         return memo[n];
     }
 
-    // Approach 2: Bottom-Up DP (Tabulation)
     public int climbStairsTabulation(int n) {
         if (n <= 2) return n;
         int[] dp = new int[n + 1];
@@ -31,7 +26,6 @@ public class DP_Array_P1_ClimbingStairs {
         return dp[n];
     }
 
-    // Approach 3: Space-Optimized DP (Two Variables)
     public int climbStairsSpaceOptimized(int n) {
         if (n <= 2) return n;
         int first = 1;
@@ -42,5 +36,11 @@ public class DP_Array_P1_ClimbingStairs {
             second = third;
         }
         return second;
+    }
+
+    public static void main(String[] args) {
+        DP_Array_P1_ClimbingStairs solver = new DP_Array_P1_ClimbingStairs();
+        int n = 5;
+        System.out.println("Climbing Stairs (n = " + n + "): " + solver.climbStairsSpaceOptimized(n));
     }
 }
