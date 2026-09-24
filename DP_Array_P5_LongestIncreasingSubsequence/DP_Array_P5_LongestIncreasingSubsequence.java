@@ -24,7 +24,6 @@ public class DP_Array_P5_LongestIncreasingSubsequence {
         return memo[currIdx][prevIdx + 1] = Math.max(take, skip);
     }
 
-    // Approach 2: Bottom-Up DP (Tabulation O(N^2))
     public int lengthOfLISTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int n = nums.length;
@@ -41,5 +40,27 @@ public class DP_Array_P5_LongestIncreasingSubsequence {
             maxLIS = Math.max(maxLIS, dp[i]);
         }
         return maxLIS;
+    }
+
+    // Approach 3: Binary Search Patience Sorting O(N log N)
+    public int lengthOfLISBinarySearch(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        int[] tails = new int[nums.length];
+        int size = 0;
+
+        for (int x : nums) {
+            int i = 0, j = size;
+            while (i < j) {
+                int mid = (i + j) / 2;
+                if (tails[mid] < x) {
+                    i = mid + 1;
+                } else {
+                    j = mid;
+                }
+            }
+            tails[i] = x;
+            if (i == size) size++;
+        }
+        return size;
     }
 }
