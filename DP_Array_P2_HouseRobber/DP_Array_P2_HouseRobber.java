@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class DP_Array_P2_HouseRobber {
 
+    // Recurrence: rob(i) = max(nums[i] + rob(i-2), rob(i-1))
     public int robMemo(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int[] memo = new int[nums.length];
@@ -19,6 +20,7 @@ public class DP_Array_P2_HouseRobber {
         return memo[i] = Math.max(pick, skip);
     }
 
+    // dp[i] = maximum loot up to house i
     public int robTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         if (nums.length == 1) return nums[0];
@@ -33,6 +35,7 @@ public class DP_Array_P2_HouseRobber {
         return dp[nums.length - 1];
     }
 
+    // Store only prev2 and prev1
     public int robSpaceOptimized(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         if (nums.length == 1) return nums[0];
