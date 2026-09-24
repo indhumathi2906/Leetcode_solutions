@@ -2,6 +2,7 @@ package DP_Array_P1_ClimbingStairs;
 
 public class DP_Array_P1_ClimbingStairs {
 
+    // Top-Down Recurrence: f(n) = f(n-1) + f(n-2)
     public int climbStairsMemo(int n) {
         if (n <= 0) return 0;
         int[] memo = new int[n + 1];
@@ -15,6 +16,7 @@ public class DP_Array_P1_ClimbingStairs {
         return memo[n];
     }
 
+    // Bottom-Up Tabulation: dp[i] = dp[i-1] + dp[i-2]
     public int climbStairsTabulation(int n) {
         if (n <= 2) return n;
         int[] dp = new int[n + 1];
@@ -26,6 +28,7 @@ public class DP_Array_P1_ClimbingStairs {
         return dp[n];
     }
 
+    // Space-Optimized O(1): Constant memory tracking
     public int climbStairsSpaceOptimized(int n) {
         if (n <= 2) return n;
         int first = 1;
