@@ -50,6 +50,7 @@ public class DP_Array_P6_PartitionEqualSubsetSum {
         return dp[n][target];
     }
 
+    // Reverse inner loop prevents reusing the same item in 0/1 Knapsack
     public boolean canPartitionSpaceOptimized(int[] nums) {
         if (nums == null || nums.length == 0) return false;
         int sum = 0;
