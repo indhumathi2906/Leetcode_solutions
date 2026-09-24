@@ -1,6 +1,8 @@
 package DP_Array_P4_CoinChange;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class DP_Array_P4_CoinChange {
 
@@ -26,7 +28,6 @@ public class DP_Array_P4_CoinChange {
         return memo[rem];
     }
 
-    // Approach 2: Bottom-Up DP (1D Tabulation)
     public int coinChangeTabulation(int[] coins, int amount) {
         if (amount < 0) return -1;
         if (amount == 0) return 0;
@@ -44,5 +45,32 @@ public class DP_Array_P4_CoinChange {
             }
         }
         return dp[amount] > amount ? -1 : dp[amount];
+    }
+
+    // Approach 3: BFS Level-Order Search
+    public int coinChangeBFS(int[] coins, int amount) {
+        if (amount == 0) return 0;
+        Queue<Integer> queue = new LinkedList<>();
+        boolean[] visited = new boolean[amount + 1];
+        queue.offer(0);
+        visited[0] = true;
+        int steps = 0;
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            steps++;
+            for (int i = 0; i < size; i++) {
+                int curr = queue.poll();
+                for (int coin : coins) {
+                    int next = curr + coin;
+                    if (next == amount) return steps;
+                    if (next < amount && !visited[next]) {
+                        visited[next] = true;
+                        queue.offer(next);
+                    }
+                }
+            }
+        }
+        return -1;
     }
 }
