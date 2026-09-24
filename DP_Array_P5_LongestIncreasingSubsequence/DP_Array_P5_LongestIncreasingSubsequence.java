@@ -42,7 +42,6 @@ public class DP_Array_P5_LongestIncreasingSubsequence {
         return maxLIS;
     }
 
-    // Approach 3: Binary Search Patience Sorting O(N log N)
     public int lengthOfLISBinarySearch(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int[] tails = new int[nums.length];
@@ -62,5 +61,11 @@ public class DP_Array_P5_LongestIncreasingSubsequence {
             if (i == size) size++;
         }
         return size;
+    }
+
+    public static void main(String[] args) {
+        DP_Array_P5_LongestIncreasingSubsequence solver = new DP_Array_P5_LongestIncreasingSubsequence();
+        int[] nums = {10, 9, 2, 5, 3, 7, 101, 18};
+        System.out.println("LIS: " + solver.lengthOfLISBinarySearch(nums));
     }
 }
