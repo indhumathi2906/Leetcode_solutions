@@ -1,5 +1,7 @@
 package DP_Array_P3_MaximumProductSubarray;
 
+import java.util.Arrays;
+
 public class DP_Array_P3_MaximumProductSubarray {
 
     public int maxProductBruteForce(int[] nums) {
@@ -39,7 +41,6 @@ public class DP_Array_P3_MaximumProductSubarray {
         return globalMax;
     }
 
-    // Approach 3: Space-Optimized DP (O(1) Space)
     public int maxProductSpaceOptimized(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
 
@@ -61,5 +62,11 @@ public class DP_Array_P3_MaximumProductSubarray {
             result = Math.max(result, maxSoFar);
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        DP_Array_P3_MaximumProductSubarray solver = new DP_Array_P3_MaximumProductSubarray();
+        int[] nums = {2, 3, -2, 4};
+        System.out.println("Max Product Subarray: " + solver.maxProductSpaceOptimized(nums));
     }
 }
