@@ -27,6 +27,7 @@ public class DP_Array_P7_DecodeWays {
         return memo[index] = ways;
     }
 
+    // 1-digit range: [1, 9]; 2-digit range: [10, 26]
     public int numDecodingsTabulation(String s) {
         if (s == null || s.length() == 0 || s.charAt(0) == '0') return 0;
         int n = s.length();
@@ -48,6 +49,7 @@ public class DP_Array_P7_DecodeWays {
         return dp[n];
     }
 
+    // O(1) memory state tracking
     public int numDecodingsSpaceOptimized(String s) {
         if (s == null || s.length() == 0 || s.charAt(0) == '0') return 0;
         int n = s.length();
