@@ -1,8 +1,9 @@
 package DP_Array_P4_CoinChange;
 
+import java.util.Arrays;
+
 public class DP_Array_P4_CoinChange {
 
-    // Approach 1: Top-Down DP (Memoization)
     public int coinChangeMemo(int[] coins, int amount) {
         if (amount < 1) return 0;
         int[] memo = new int[amount + 1];
@@ -23,5 +24,25 @@ public class DP_Array_P4_CoinChange {
         }
         memo[rem] = (minCoins == Integer.MAX_VALUE) ? -1 : minCoins;
         return memo[rem];
+    }
+
+    // Approach 2: Bottom-Up DP (1D Tabulation)
+    public int coinChangeTabulation(int[] coins, int amount) {
+        if (amount < 0) return -1;
+        if (amount == 0) return 0;
+
+        int max = amount + 1;
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, max);
+        dp[0] = 0;
+
+        for (int i = 1; i <= amount; i++) {
+            for (int coin : coins) {
+                if (coin <= i) {
+                    dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+                }
+            }
+        }
+        return dp[amount] > amount ? -1 : dp[amount];
     }
 }
