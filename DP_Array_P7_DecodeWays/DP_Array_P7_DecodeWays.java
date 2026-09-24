@@ -27,7 +27,6 @@ public class DP_Array_P7_DecodeWays {
         return memo[index] = ways;
     }
 
-    // Approach 2: Bottom-Up 1D Tabulation
     public int numDecodingsTabulation(String s) {
         if (s == null || s.length() == 0 || s.charAt(0) == '0') return 0;
         int n = s.length();
@@ -47,5 +46,29 @@ public class DP_Array_P7_DecodeWays {
             }
         }
         return dp[n];
+    }
+
+    // Approach 3: Space-Optimized DP (O(1) Space)
+    public int numDecodingsSpaceOptimized(String s) {
+        if (s == null || s.length() == 0 || s.charAt(0) == '0') return 0;
+        int n = s.length();
+        int prev2 = 1;
+        int prev1 = 1;
+
+        for (int i = 2; i <= n; i++) {
+            int current = 0;
+            int oneDigit = Integer.parseInt(s.substring(i - 1, i));
+            int twoDigit = Integer.parseInt(s.substring(i - 2, i));
+
+            if (oneDigit >= 1 && oneDigit <= 9) {
+                current += prev1;
+            }
+            if (twoDigit >= 10 && twoDigit <= 26) {
+                current += prev2;
+            }
+            prev2 = prev1;
+            prev1 = current;
+        }
+        return prev1;
     }
 }
