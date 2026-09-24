@@ -47,7 +47,6 @@ public class DP_Array_P4_CoinChange {
         return dp[amount] > amount ? -1 : dp[amount];
     }
 
-    // Approach 3: BFS Level-Order Search
     public int coinChangeBFS(int[] coins, int amount) {
         if (amount == 0) return 0;
         Queue<Integer> queue = new LinkedList<>();
@@ -72,5 +71,12 @@ public class DP_Array_P4_CoinChange {
             }
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        DP_Array_P4_CoinChange solver = new DP_Array_P4_CoinChange();
+        int[] coins = {1, 2, 5};
+        int amount = 11;
+        System.out.println("Coin Change " + Arrays.toString(coins) + " target " + amount + ": " + solver.coinChangeTabulation(coins, amount));
     }
 }
