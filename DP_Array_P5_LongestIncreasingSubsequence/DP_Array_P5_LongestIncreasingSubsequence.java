@@ -24,6 +24,7 @@ public class DP_Array_P5_LongestIncreasingSubsequence {
         return memo[currIdx][prevIdx + 1] = Math.max(take, skip);
     }
 
+    // dp[i] represents length of LIS ending at index i
     public int lengthOfLISTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int n = nums.length;
@@ -42,6 +43,7 @@ public class DP_Array_P5_LongestIncreasingSubsequence {
         return maxLIS;
     }
 
+    // tails[i] stores smallest tail element among all increasing subsequences of length i+1
     public int lengthOfLISBinarySearch(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int[] tails = new int[nums.length];
