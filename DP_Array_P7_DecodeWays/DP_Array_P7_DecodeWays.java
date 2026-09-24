@@ -1,9 +1,8 @@
 package DP_Array_P7_DecodeWays;
 
-/**
- * DP Array Problem 7: 91. Decode Ways (LeetCode #91)
- * Link: https://leetcode.com/problems/decode-ways/
- */
 public class DP_Array_P7_DecodeWays {
 
+    private boolean hasLeadingZero(String s) {
+        return s == null || s.length() == 0 || s.charAt(0) == '0';
+    }
 }
