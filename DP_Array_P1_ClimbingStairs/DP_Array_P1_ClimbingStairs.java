@@ -1,8 +1,19 @@
 package DP_Array_P1_ClimbingStairs;
 
+/**
+ * DP Array Problem 1: 70. Climbing Stairs (LeetCode #70)
+ * Link: https://leetcode.com/problems/climbing-stairs/
+ *
+ * Description:
+ * You are climbing a staircase. It takes n steps to reach the top.
+ * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+ *
+ * Time Complexity: Top-Down O(N), Bottom-Up O(N), Space-Optimized O(N)
+ * Space Complexity: Top-Down O(N), Bottom-Up O(N), Space-Optimized O(1)
+ */
 public class DP_Array_P1_ClimbingStairs {
 
-    // Top-Down Recurrence: f(n) = f(n-1) + f(n-2)
+    // Approach 1: Top-Down DP (Recursion + Memoization)
     public int climbStairsMemo(int n) {
         if (n <= 0) return 0;
         int[] memo = new int[n + 1];
@@ -16,7 +27,7 @@ public class DP_Array_P1_ClimbingStairs {
         return memo[n];
     }
 
-    // Bottom-Up Tabulation: dp[i] = dp[i-1] + dp[i-2]
+    // Approach 2: Bottom-Up DP (Tabulation)
     public int climbStairsTabulation(int n) {
         if (n <= 2) return n;
         int[] dp = new int[n + 1];
@@ -28,7 +39,7 @@ public class DP_Array_P1_ClimbingStairs {
         return dp[n];
     }
 
-    // Space-Optimized O(1): Constant memory tracking
+    // Approach 3: Space-Optimized DP (Two Variables)
     public int climbStairsSpaceOptimized(int n) {
         if (n <= 2) return n;
         int first = 1;
@@ -44,6 +55,10 @@ public class DP_Array_P1_ClimbingStairs {
     public static void main(String[] args) {
         DP_Array_P1_ClimbingStairs solver = new DP_Array_P1_ClimbingStairs();
         int n = 5;
-        System.out.println("Climbing Stairs (n = " + n + "): " + solver.climbStairsSpaceOptimized(n));
+        System.out.println("Climbing Stairs (n = " + n + "):");
+        System.out.println("Memoization: " + solver.climbStairsMemo(n));
+        System.out.println("Tabulation:  " + solver.climbStairsTabulation(n));
+        System.out.println("Optimized:   " + solver.climbStairsSpaceOptimized(n));
+        assert solver.climbStairsSpaceOptimized(n) == 8;
     }
 }
