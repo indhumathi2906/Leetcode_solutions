@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class DP_Array_P2_HouseRobber {
 
-    // Approach 1: Top-Down DP (Memoization)
     public int robMemo(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int[] memo = new int[nums.length];
@@ -18,5 +17,20 @@ public class DP_Array_P2_HouseRobber {
         int pick = nums[i] + robHelper(nums, i - 2, memo);
         int skip = robHelper(nums, i - 1, memo);
         return memo[i] = Math.max(pick, skip);
+    }
+
+    // Approach 2: Bottom-Up DP (Tabulation)
+    public int robTabulation(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        if (nums.length == 1) return nums[0];
+
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        dp[1] = Math.max(nums[0], nums[1]);
+
+        for (int i = 2; i < nums.length; i++) {
+            dp[i] = Math.max(dp[i - 1], nums[i] + dp[i - 2]);
+        }
+        return dp[nums.length - 1];
     }
 }
