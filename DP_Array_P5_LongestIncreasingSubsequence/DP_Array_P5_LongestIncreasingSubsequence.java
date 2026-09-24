@@ -2,8 +2,23 @@ package DP_Array_P5_LongestIncreasingSubsequence;
 
 import java.util.Arrays;
 
+/**
+ * DP Array Problem 5: 300. Longest Increasing Subsequence (LeetCode #300)
+ * Link: https://leetcode.com/problems/longest-increasing-subsequence/
+ *
+ * Description:
+ * Given an integer array nums, return the length of the longest strictly increasing subsequence.
+ *
+ * Time Complexity:
+ * - Memoization: O(N^2)
+ * - Tabulation: O(N^2)
+ * - Binary Search (Patience Sorting): O(N log N)
+ *
+ * Space Complexity: O(N)
+ */
 public class DP_Array_P5_LongestIncreasingSubsequence {
 
+    // Approach 1: Top-Down DP (Memoization)
     public int lengthOfLISMemo(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int[][] memo = new int[nums.length][nums.length + 1];
@@ -24,7 +39,7 @@ public class DP_Array_P5_LongestIncreasingSubsequence {
         return memo[currIdx][prevIdx + 1] = Math.max(take, skip);
     }
 
-    // dp[i] represents length of LIS ending at index i
+    // Approach 2: Bottom-Up DP (Tabulation O(N^2))
     public int lengthOfLISTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int n = nums.length;
@@ -43,7 +58,7 @@ public class DP_Array_P5_LongestIncreasingSubsequence {
         return maxLIS;
     }
 
-    // tails[i] stores smallest tail element among all increasing subsequences of length i+1
+    // Approach 3: Binary Search Patience Sorting O(N log N)
     public int lengthOfLISBinarySearch(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int[] tails = new int[nums.length];
@@ -68,6 +83,10 @@ public class DP_Array_P5_LongestIncreasingSubsequence {
     public static void main(String[] args) {
         DP_Array_P5_LongestIncreasingSubsequence solver = new DP_Array_P5_LongestIncreasingSubsequence();
         int[] nums = {10, 9, 2, 5, 3, 7, 101, 18};
-        System.out.println("LIS: " + solver.lengthOfLISBinarySearch(nums));
+        System.out.println("LIS for " + Arrays.toString(nums) + ":");
+        System.out.println("Memoization:   " + solver.lengthOfLISMemo(nums));
+        System.out.println("Tabulation:    " + solver.lengthOfLISTabulation(nums));
+        System.out.println("Binary Search: " + solver.lengthOfLISBinarySearch(nums));
+        assert solver.lengthOfLISBinarySearch(nums) == 4;
     }
 }
