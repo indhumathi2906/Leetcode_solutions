@@ -19,7 +19,6 @@ public class DP_Array_P2_HouseRobber {
         return memo[i] = Math.max(pick, skip);
     }
 
-    // Approach 2: Bottom-Up DP (Tabulation)
     public int robTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         if (nums.length == 1) return nums[0];
@@ -32,5 +31,21 @@ public class DP_Array_P2_HouseRobber {
             dp[i] = Math.max(dp[i - 1], nums[i] + dp[i - 2]);
         }
         return dp[nums.length - 1];
+    }
+
+    // Approach 3: Space-Optimized DP (O(1) Space)
+    public int robSpaceOptimized(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        if (nums.length == 1) return nums[0];
+
+        int prev2 = nums[0];
+        int prev1 = Math.max(nums[0], nums[1]);
+
+        for (int i = 2; i < nums.length; i++) {
+            int current = Math.max(prev1, nums[i] + prev2);
+            prev2 = prev1;
+            prev1 = current;
+        }
+        return prev1;
     }
 }
