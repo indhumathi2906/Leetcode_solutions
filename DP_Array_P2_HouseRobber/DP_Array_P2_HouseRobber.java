@@ -33,7 +33,6 @@ public class DP_Array_P2_HouseRobber {
         return dp[nums.length - 1];
     }
 
-    // Approach 3: Space-Optimized DP (O(1) Space)
     public int robSpaceOptimized(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         if (nums.length == 1) return nums[0];
@@ -47,5 +46,11 @@ public class DP_Array_P2_HouseRobber {
             prev1 = current;
         }
         return prev1;
+    }
+
+    public static void main(String[] args) {
+        DP_Array_P2_HouseRobber solver = new DP_Array_P2_HouseRobber();
+        int[] nums = {2, 7, 9, 3, 1};
+        System.out.println("House Robber: " + solver.robSpaceOptimized(nums));
     }
 }
