@@ -1,5 +1,7 @@
 package DP_Array_P6_PartitionEqualSubsetSum;
 
+import java.util.Arrays;
+
 public class DP_Array_P6_PartitionEqualSubsetSum {
 
     public boolean canPartitionMemo(int[] nums) {
@@ -48,7 +50,6 @@ public class DP_Array_P6_PartitionEqualSubsetSum {
         return dp[n][target];
     }
 
-    // Approach 3: 1D Space-Optimized DP
     public boolean canPartitionSpaceOptimized(int[] nums) {
         if (nums == null || nums.length == 0) return false;
         int sum = 0;
@@ -65,5 +66,11 @@ public class DP_Array_P6_PartitionEqualSubsetSum {
             }
         }
         return dp[target];
+    }
+
+    public static void main(String[] args) {
+        DP_Array_P6_PartitionEqualSubsetSum solver = new DP_Array_P6_PartitionEqualSubsetSum();
+        int[] nums = {1, 5, 11, 5};
+        System.out.println("Partition Subset Sum: " + solver.canPartitionSpaceOptimized(nums));
     }
 }
