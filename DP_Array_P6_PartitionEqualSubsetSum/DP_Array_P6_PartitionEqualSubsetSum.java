@@ -2,8 +2,22 @@ package DP_Array_P6_PartitionEqualSubsetSum;
 
 import java.util.Arrays;
 
+/**
+ * DP Array Problem 6: 416. Partition Equal Subset Sum (LeetCode #416)
+ * Link: https://leetcode.com/problems/partition-equal-subset-sum/
+ *
+ * Description:
+ * Given an integer array nums, return true if you can partition the array into two subsets
+ * such that the sum of the elements in both subsets is equal or false otherwise.
+ *
+ * Subset Sum 0/1 Knapsack Pattern.
+ *
+ * Time Complexity: O(N * Target)
+ * Space Complexity: 2D DP O(N * Target), 1D Space-Optimized O(Target)
+ */
 public class DP_Array_P6_PartitionEqualSubsetSum {
 
+    // Approach 1: Top-Down DP (Memoization)
     public boolean canPartitionMemo(int[] nums) {
         if (nums == null || nums.length == 0) return false;
         int totalSum = 0;
@@ -26,6 +40,7 @@ public class DP_Array_P6_PartitionEqualSubsetSum {
         return memo[index][target] = (include || exclude);
     }
 
+    // Approach 2: Bottom-Up 2D Tabulation
     public boolean canPartitionTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return false;
         int sum = 0;
@@ -50,7 +65,7 @@ public class DP_Array_P6_PartitionEqualSubsetSum {
         return dp[n][target];
     }
 
-    // Reverse inner loop prevents reusing the same item in 0/1 Knapsack
+    // Approach 3: 1D Space-Optimized DP
     public boolean canPartitionSpaceOptimized(int[] nums) {
         if (nums == null || nums.length == 0) return false;
         int sum = 0;
@@ -72,6 +87,10 @@ public class DP_Array_P6_PartitionEqualSubsetSum {
     public static void main(String[] args) {
         DP_Array_P6_PartitionEqualSubsetSum solver = new DP_Array_P6_PartitionEqualSubsetSum();
         int[] nums = {1, 5, 11, 5};
-        System.out.println("Partition Subset Sum: " + solver.canPartitionSpaceOptimized(nums));
+        System.out.println("Partition Equal Subset Sum " + Arrays.toString(nums) + ":");
+        System.out.println("Memoization: " + solver.canPartitionMemo(nums));
+        System.out.println("Tabulation:  " + solver.canPartitionTabulation(nums));
+        System.out.println("Optimized:   " + solver.canPartitionSpaceOptimized(nums));
+        assert solver.canPartitionSpaceOptimized(nums) == true;
     }
 }
