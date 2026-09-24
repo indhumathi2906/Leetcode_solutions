@@ -48,7 +48,6 @@ public class DP_Array_P7_DecodeWays {
         return dp[n];
     }
 
-    // Approach 3: Space-Optimized DP (O(1) Space)
     public int numDecodingsSpaceOptimized(String s) {
         if (s == null || s.length() == 0 || s.charAt(0) == '0') return 0;
         int n = s.length();
@@ -70,5 +69,11 @@ public class DP_Array_P7_DecodeWays {
             prev1 = current;
         }
         return prev1;
+    }
+
+    public static void main(String[] args) {
+        DP_Array_P7_DecodeWays solver = new DP_Array_P7_DecodeWays();
+        String s = "226";
+        System.out.println("Decode Ways for "" + s + "": " + solver.numDecodingsSpaceOptimized(s));
     }
 }
