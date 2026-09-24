@@ -4,9 +4,24 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * DP Array Problem 4: 322. Coin Change (LeetCode #322)
+ * Link: https://leetcode.com/problems/coin-change/
+ *
+ * Description:
+ * You are given an integer array coins representing coins of different denominations and an integer
+ * amount representing a total amount of money.
+ * Return the fewest number of coins that you need to make up that amount. If that amount of money
+ * cannot be made up by any combination of the coins, return -1.
+ *
+ * Unbounded Knapsack Pattern.
+ *
+ * Time Complexity: O(Amount * N)
+ * Space Complexity: O(Amount)
+ */
 public class DP_Array_P4_CoinChange {
 
-    // Recurrence: memo(rem) = 1 + min(memo(rem - coin))
+    // Approach 1: Top-Down DP (Memoization)
     public int coinChangeMemo(int[] coins, int amount) {
         if (amount < 1) return 0;
         int[] memo = new int[amount + 1];
@@ -29,7 +44,7 @@ public class DP_Array_P4_CoinChange {
         return memo[rem];
     }
 
-    // 1D DP table initialized to amount+1
+    // Approach 2: Bottom-Up DP (1D Tabulation)
     public int coinChangeTabulation(int[] coins, int amount) {
         if (amount < 0) return -1;
         if (amount == 0) return 0;
@@ -49,7 +64,7 @@ public class DP_Array_P4_CoinChange {
         return dp[amount] > amount ? -1 : dp[amount];
     }
 
-    // BFS shortest path in unweighted state graph
+    // Approach 3: BFS Shortest Path Traversal
     public int coinChangeBFS(int[] coins, int amount) {
         if (amount == 0) return 0;
         Queue<Integer> queue = new LinkedList<>();
@@ -80,6 +95,10 @@ public class DP_Array_P4_CoinChange {
         DP_Array_P4_CoinChange solver = new DP_Array_P4_CoinChange();
         int[] coins = {1, 2, 5};
         int amount = 11;
-        System.out.println("Coin Change " + Arrays.toString(coins) + " target " + amount + ": " + solver.coinChangeTabulation(coins, amount));
+        System.out.println("Coin Change " + Arrays.toString(coins) + " target " + amount + ":");
+        System.out.println("Memoization: " + solver.coinChangeMemo(coins, amount));
+        System.out.println("Tabulation:  " + solver.coinChangeTabulation(coins, amount));
+        System.out.println("BFS:         " + solver.coinChangeBFS(coins, amount));
+        assert solver.coinChangeTabulation(coins, amount) == 3;
     }
 }
