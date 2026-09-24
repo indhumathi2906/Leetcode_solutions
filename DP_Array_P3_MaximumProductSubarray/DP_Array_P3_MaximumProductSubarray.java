@@ -15,7 +15,6 @@ public class DP_Array_P3_MaximumProductSubarray {
         return maxProd;
     }
 
-    // Approach 2: Dual DP Tables (Tabulation)
     public int maxProductTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
 
@@ -38,5 +37,29 @@ public class DP_Array_P3_MaximumProductSubarray {
             globalMax = Math.max(globalMax, maxDP[i]);
         }
         return globalMax;
+    }
+
+    // Approach 3: Space-Optimized DP (O(1) Space)
+    public int maxProductSpaceOptimized(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+
+        int maxSoFar = nums[0];
+        int minSoFar = nums[0];
+        int result = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            int curr = nums[i];
+            if (curr < 0) {
+                int temp = maxSoFar;
+                maxSoFar = minSoFar;
+                minSoFar = temp;
+            }
+
+            maxSoFar = Math.max(curr, maxSoFar * curr);
+            minSoFar = Math.min(curr, minSoFar * curr);
+
+            result = Math.max(result, maxSoFar);
+        }
+        return result;
     }
 }
