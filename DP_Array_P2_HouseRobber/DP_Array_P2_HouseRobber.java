@@ -2,9 +2,22 @@ package DP_Array_P2_HouseRobber;
 
 import java.util.Arrays;
 
+/**
+ * DP Array Problem 2: 198. House Robber (LeetCode #198)
+ * Link: https://leetcode.com/problems/house-robber/
+ *
+ * Description:
+ * You are a professional robber planning to rob houses along a street. Each house has a certain
+ * amount of money stashed. Adjacent houses have security systems connected — it will automatically
+ * contact the police if two adjacent houses were broken into on the same night.
+ * Determine maximum amount of money you can rob without alerting the police.
+ *
+ * Time Complexity: O(N)
+ * Space Complexity: Top-Down O(N), Bottom-Up O(N), Space-Optimized O(1)
+ */
 public class DP_Array_P2_HouseRobber {
 
-    // Recurrence: rob(i) = max(nums[i] + rob(i-2), rob(i-1))
+    // Approach 1: Top-Down DP (Memoization)
     public int robMemo(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int[] memo = new int[nums.length];
@@ -20,7 +33,7 @@ public class DP_Array_P2_HouseRobber {
         return memo[i] = Math.max(pick, skip);
     }
 
-    // dp[i] = maximum loot up to house i
+    // Approach 2: Bottom-Up DP (Tabulation)
     public int robTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         if (nums.length == 1) return nums[0];
@@ -35,7 +48,7 @@ public class DP_Array_P2_HouseRobber {
         return dp[nums.length - 1];
     }
 
-    // Store only prev2 and prev1
+    // Approach 3: Space-Optimized DP (O(1) Space)
     public int robSpaceOptimized(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         if (nums.length == 1) return nums[0];
@@ -54,6 +67,10 @@ public class DP_Array_P2_HouseRobber {
     public static void main(String[] args) {
         DP_Array_P2_HouseRobber solver = new DP_Array_P2_HouseRobber();
         int[] nums = {2, 7, 9, 3, 1};
-        System.out.println("House Robber: " + solver.robSpaceOptimized(nums));
+        System.out.println("House Robber " + Arrays.toString(nums) + ":");
+        System.out.println("Memoization: " + solver.robMemo(nums));
+        System.out.println("Tabulation:  " + solver.robTabulation(nums));
+        System.out.println("Optimized:   " + solver.robSpaceOptimized(nums));
+        assert solver.robSpaceOptimized(nums) == 12;
     }
 }
