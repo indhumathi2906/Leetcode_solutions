@@ -24,7 +24,6 @@ public class DP_Array_P6_PartitionEqualSubsetSum {
         return memo[index][target] = (include || exclude);
     }
 
-    // Approach 2: Bottom-Up 2D Tabulation
     public boolean canPartitionTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return false;
         int sum = 0;
@@ -47,5 +46,24 @@ public class DP_Array_P6_PartitionEqualSubsetSum {
             }
         }
         return dp[n][target];
+    }
+
+    // Approach 3: 1D Space-Optimized DP
+    public boolean canPartitionSpaceOptimized(int[] nums) {
+        if (nums == null || nums.length == 0) return false;
+        int sum = 0;
+        for (int num : nums) sum += num;
+        if (sum % 2 != 0) return false;
+
+        int target = sum / 2;
+        boolean[] dp = new boolean[target + 1];
+        dp[0] = true;
+
+        for (int num : nums) {
+            for (int j = target; j >= num; j--) {
+                dp[j] = dp[j] || dp[j - num];
+            }
+        }
+        return dp[target];
     }
 }
