@@ -2,8 +2,23 @@ package DP_Array_P3_MaximumProductSubarray;
 
 import java.util.Arrays;
 
+/**
+ * DP Array Problem 3: 152. Maximum Product Subarray (LeetCode #152)
+ * Link: https://leetcode.com/problems/maximum-product-subarray/
+ *
+ * Description:
+ * Given an integer array nums, find a contiguous non-empty subarray that has the largest product,
+ * and return the product.
+ *
+ * Key Insight: Multiplying two negative numbers yields a positive number.
+ * We must maintain both maximum and minimum product DP states at each index.
+ *
+ * Time Complexity: O(N)
+ * Space Complexity: Tabulation O(N), Space-Optimized O(1)
+ */
 public class DP_Array_P3_MaximumProductSubarray {
 
+    // Approach 1: Brute Force Baseline
     public int maxProductBruteForce(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int maxProd = nums[0];
@@ -17,7 +32,7 @@ public class DP_Array_P3_MaximumProductSubarray {
         return maxProd;
     }
 
-    // Maintain max & min DP states for negative products
+    // Approach 2: Dual DP Tables (Tabulation)
     public int maxProductTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
 
@@ -42,7 +57,7 @@ public class DP_Array_P3_MaximumProductSubarray {
         return globalMax;
     }
 
-    // Swap maxSoFar and minSoFar when curr < 0
+    // Approach 3: Space-Optimized DP (O(1) Space)
     public int maxProductSpaceOptimized(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
 
@@ -69,6 +84,10 @@ public class DP_Array_P3_MaximumProductSubarray {
     public static void main(String[] args) {
         DP_Array_P3_MaximumProductSubarray solver = new DP_Array_P3_MaximumProductSubarray();
         int[] nums = {2, 3, -2, 4};
-        System.out.println("Max Product Subarray: " + solver.maxProductSpaceOptimized(nums));
+        System.out.println("Max Product Subarray " + Arrays.toString(nums) + ":");
+        System.out.println("Brute Force: " + solver.maxProductBruteForce(nums));
+        System.out.println("Tabulation:  " + solver.maxProductTabulation(nums));
+        System.out.println("Optimized:   " + solver.maxProductSpaceOptimized(nums));
+        assert solver.maxProductSpaceOptimized(nums) == 6;
     }
 }
