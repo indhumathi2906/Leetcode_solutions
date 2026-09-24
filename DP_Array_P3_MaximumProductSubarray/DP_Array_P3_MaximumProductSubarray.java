@@ -17,6 +17,7 @@ public class DP_Array_P3_MaximumProductSubarray {
         return maxProd;
     }
 
+    // Maintain max & min DP states for negative products
     public int maxProductTabulation(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
 
@@ -41,6 +42,7 @@ public class DP_Array_P3_MaximumProductSubarray {
         return globalMax;
     }
 
+    // Swap maxSoFar and minSoFar when curr < 0
     public int maxProductSpaceOptimized(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
 
