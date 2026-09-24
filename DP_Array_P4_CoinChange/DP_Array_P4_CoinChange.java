@@ -6,6 +6,7 @@ import java.util.Queue;
 
 public class DP_Array_P4_CoinChange {
 
+    // Recurrence: memo(rem) = 1 + min(memo(rem - coin))
     public int coinChangeMemo(int[] coins, int amount) {
         if (amount < 1) return 0;
         int[] memo = new int[amount + 1];
@@ -28,6 +29,7 @@ public class DP_Array_P4_CoinChange {
         return memo[rem];
     }
 
+    // 1D DP table initialized to amount+1
     public int coinChangeTabulation(int[] coins, int amount) {
         if (amount < 0) return -1;
         if (amount == 0) return 0;
@@ -47,6 +49,7 @@ public class DP_Array_P4_CoinChange {
         return dp[amount] > amount ? -1 : dp[amount];
     }
 
+    // BFS shortest path in unweighted state graph
     public int coinChangeBFS(int[] coins, int amount) {
         if (amount == 0) return 0;
         Queue<Integer> queue = new LinkedList<>();
