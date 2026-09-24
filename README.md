@@ -14,6 +14,23 @@ A collection of 7 Data Structures and Algorithms (DSA) problems organized sequen
 | **Day 6** | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [`Day6_BestTimeToBuyAndSellStock/Day6_BestTimeToBuyAndSellStock.java`](./Day6_BestTimeToBuyAndSellStock/Day6_BestTimeToBuyAndSellStock.java) | Array, Dynamic Tracking |
 | **Day 7** | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [`Day7_ReverseLinkedList/Day7_ReverseLinkedList.java`](./Day7_ReverseLinkedList/Day7_ReverseLinkedList.java) | Linked List Iterative Pointer Reversal |
 
+## 🧠 Dynamic Programming on Arrays Series (7 Problems - 9 Commits Each)
+
+A curated collection of 7 Dynamic Programming on Arrays problems with step-by-step commit progression (9 commits per problem) and a combined solution file.
+
+| Problem # | Problem Name | Java Solution File | Approaches Implemented |
+|---|---|---|---|
+| **DP P1** | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [`DP_Array_P1_ClimbingStairs/DP_Array_P1_ClimbingStairs.java`](./DP_Array_P1_ClimbingStairs/DP_Array_P1_ClimbingStairs.java) | Memoization, Tabulation, $O(1)$ Space |
+| **DP P2** | [198. House Robber](https://leetcode.com/problems/house-robber/) | [`DP_Array_P2_HouseRobber/DP_Array_P2_HouseRobber.java`](./DP_Array_P2_HouseRobber/DP_Array_P2_HouseRobber.java) | Memoization, Tabulation, $O(1)$ Space |
+| **DP P3** | [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | [`DP_Array_P3_MaximumProductSubarray/DP_Array_P3_MaximumProductSubarray.java`](./DP_Array_P3_MaximumProductSubarray/DP_Array_P3_MaximumProductSubarray.java) | Dual DP Tables, $O(1)$ Space |
+| **DP P4** | [322. Coin Change](https://leetcode.com/problems/coin-change/) | [`DP_Array_P4_CoinChange/DP_Array_P4_CoinChange.java`](./DP_Array_P4_CoinChange/DP_Array_P4_CoinChange.java) | Memoization, 1D Tabulation, BFS |
+| **DP P5** | [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [`DP_Array_P5_LongestIncreasingSubsequence/DP_Array_P5_LongestIncreasingSubsequence.java`](./DP_Array_P5_LongestIncreasingSubsequence/DP_Array_P5_LongestIncreasingSubsequence.java) | Memoization, $O(N^2)$ DP, $O(N \log N)$ Binary Search |
+| **DP P6** | [416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | [`DP_Array_P6_PartitionEqualSubsetSum/DP_Array_P6_PartitionEqualSubsetSum.java`](./DP_Array_P6_PartitionEqualSubsetSum/DP_Array_P6_PartitionEqualSubsetSum.java) | Memoization, 2D DP, 1D Space-Optimized |
+| **DP P7** | [91. Decode Ways](https://leetcode.com/problems/decode-ways/) | [`DP_Array_P7_DecodeWays/DP_Array_P7_DecodeWays.java`](./DP_Array_P7_DecodeWays/DP_Array_P7_DecodeWays.java) | Memoization, 1D Tabulation, $O(1)$ Space |
+
+- 📄 **Combined Master Java File:** [`DP_On_Arrays_Solutions.java`](./DP_On_Arrays_Solutions.java)
+- 📚 **Full Documentation & Guide:** [`DP_On_Arrays_Collection.md`](./DP_On_Arrays_Collection.md)
+
 ---
 
 A collection of LeetCode questions to ace the coding interview! - Created using [LeetHub v2](https://github.com/arunbhardwaj/LeetHub-2.0)
