@@ -30,4 +30,17 @@ public class DP_Array_P1_ClimbingStairs {
         }
         return dp[n];
     }
+
+    // Approach 3: Space-Optimized DP (Two Variables)
+    public int climbStairsSpaceOptimized(int n) {
+        if (n <= 2) return n;
+        int first = 1;
+        int second = 2;
+        for (int i = 3; i <= n; i++) {
+            int third = first + second;
+            first = second;
+            second = third;
+        }
+        return second;
+    }
 }
