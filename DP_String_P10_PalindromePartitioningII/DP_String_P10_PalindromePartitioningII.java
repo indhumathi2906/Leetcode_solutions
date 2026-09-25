@@ -56,4 +56,19 @@ public class DP_String_P10_PalindromePartitioningII {
         }
         return isPal;
     }
+
+    public int minCutExpandCenter(String s) {
+        int n = s.length();
+        int[] cut = new int[n + 1];
+        for (int i = 0; i <= n; i++) cut[i] = i - 1;
+        for (int i = 0; i < n; i++) {
+            for (int r = 0; i - r >= 0 && i + r < n && s.charAt(i - r) == s.charAt(i + r); r++) {
+                cut[i + r + 1] = Math.min(cut[i + r + 1], 1 + cut[i - r]);
+            }
+            for (int r = 1; i - r + 1 >= 0 && i + r < n && s.charAt(i - r + 1) == s.charAt(i + r); r++) {
+                cut[i + r + 1] = Math.min(cut[i + r + 1], 1 + cut[i - r + 1]);
+            }
+        }
+        return cut[n];
+    }
 }
