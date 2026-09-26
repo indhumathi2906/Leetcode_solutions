@@ -71,4 +71,11 @@ public class DP_String_P10_PalindromePartitioningII {
         }
         return cut[n];
     }
+
+    public static void main(String[] args) {
+        DP_String_P10_PalindromePartitioningII pp = new DP_String_P10_PalindromePartitioningII();
+        System.out.println("Test 1 Result: " + pp.minCut("aab")); // 1
+        System.out.println("Test 2 Result: " + pp.minCut("a"));   // 0
+        System.out.println("Test 3 Result: " + pp.minCut("ab"));  // 1
+    }
 }
