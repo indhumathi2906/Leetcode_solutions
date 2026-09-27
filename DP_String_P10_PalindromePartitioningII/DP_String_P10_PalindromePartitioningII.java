@@ -12,11 +12,13 @@ import java.util.Arrays;
  */
 public class DP_String_P10_PalindromePartitioningII {
 
+    // Entry point algorithm wrapper with edge case validation
     public int p10_solve(String s1, String s2) {
         if (s == null || s.length() <= 1) return 0;
         return 0;
     }
 
+    // Top-Down Memoization approach with state caching
     public int solveMemo(String s, int i, int[] memo, boolean[][] isPal) {
         if (i == s.length()) return 0;
         if (memo[i] != -1) return memo[i];
@@ -30,6 +32,7 @@ public class DP_String_P10_PalindromePartitioningII {
         return memo[i] = minCuts;
     }
 
+    // Bottom-Up 2D Dynamic Programming table calculation
     public int minCutTab(String s) {
         int n = s.length();
         boolean[][] isPal = buildPalindromeTable(s);
@@ -57,6 +60,7 @@ public class DP_String_P10_PalindromePartitioningII {
         return isPal;
     }
 
+    // 1D Space Optimized Dynamic Programming implementation
     public int minCutExpandCenter(String s) {
         int n = s.length();
         int[] cut = new int[n + 1];
