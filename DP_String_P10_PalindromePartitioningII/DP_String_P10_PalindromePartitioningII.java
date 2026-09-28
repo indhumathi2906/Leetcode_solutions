@@ -82,4 +82,9 @@ public class DP_String_P10_PalindromePartitioningII {
         System.out.println("Test 2 Result: " + pp.minCut("a"));   // 0
         System.out.println("Test 3 Result: " + pp.minCut("ab"));  // 1
     }
+
+    // Helper method: Return problem name metadata
+    public String getProblemName() {
+        return "Palindrome Partitioning II";
+    }
 }
